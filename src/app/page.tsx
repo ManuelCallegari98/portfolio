@@ -153,7 +153,7 @@ export default function Home() {
 
               {/* Profile image */}
               <Image
-                src="/me.jpg"
+                src="/images/me.jpg"
                 alt="Manuel Callegari"
                 width={300}
                 height={300}
