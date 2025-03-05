@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 export default function ProjectCard({
