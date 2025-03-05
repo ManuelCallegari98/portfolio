@@ -5,6 +5,11 @@ import SmoothScroll from '@/components/SmoothScroll'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const metadata = {
+  title: 'Manuel Callegari | Portfolio',
+  description: 'Portfolio personal de Manuel Callegari - Desarrollador Full Stack',
+}
+
 export default function RootLayout({
   children,
 }: {
