@@ -333,7 +333,7 @@ export default function Home() {
             </motion.a>
 
             <motion.a
-              href="mailto:callegarimanuel.dev@gmail.com"
+              href="mailto:manuelcallegari98@gmail.com"
               className="flex flex-col items-center p-6 rounded-xl bg-white/5 backdrop-blur-sm 
                 border border-racing-primary/10 hover:border-racing-primary/30 transition-all"
               whileHover={{ y: -5 }}
