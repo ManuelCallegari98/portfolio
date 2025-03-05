@@ -2,20 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  :root {
+    /* Colores base - Modo Claro */
+    --background: 248 250 252;  /* #f8fafc */
+    --foreground: 30 41 59;     /* #1e293b */
+    
+    /* Paleta Racing */
+    --racing-light: 110 193 230;  /* #6EC1E6 */
+    --racing-primary: 28 52 99;   /* #1C3463 */
+    --racing-yellow: 255 209 0;   /* #FFD100 */
+    --racing-dark: 10 26 54;      /* #0A1A36 */
+  }
+
+  .dark {
+    /* Colores base - Modo Oscuro */
+    --background: 10 26 54;      /* #0a0a0a */
+    --foreground: 237 237 237;   /* #ededed */
+    
+    /* Paleta Racing (puedes ajustar estos valores para dark mode) */
+    --racing-primary: 28 52 99;  /* Mantenemos el mismo azul */
+    --racing-yellow: 255 209 0;  /* Amarillo vibrante */
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  /* Clases para colores base */
+  .bg-background {
+    background-color: rgb(var(--background));
+  }
+  .text-foreground {
+    color: rgb(var(--foreground));
+  }
+
+  /* Clases para colores Racing */
+  .bg-racing-light {
+    background-color: rgb(var(--racing-light));
+  }
+  .text-racing-primary {
+    color: rgb(var(--racing-primary));
+  }
+  .bg-racing-primary {
+    background-color: rgb(var(--racing-primary));
+  }
+  .text-racing-yellow {
+    color: rgb(var(--racing-yellow));
+  }
+  .bg-racing-yellow {
+    background-color: rgb(var(--racing-yellow));
+  }
+  .animate-ballon {
+    animation: balloon 3s ease-in-out infinite;
+  }
+  
+  @keyframes balloon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  @apply bg-background text-foreground;
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }

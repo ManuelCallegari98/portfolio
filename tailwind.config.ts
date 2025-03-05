@@ -1,18 +1,28 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
-export default {
+const config: Config = {
+  darkMode: 'class',
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        racing: {
+          light: '#A3D3F5',  // Celeste Racing
+          primary: '#1C3463', // Azul oficial
+          yellow: '#FFD100',  // Amarillo emblemático
+          accent: '#FFFFFF',
+          dark: '#0A1A36',     // Azul noche
+          backgroundLight: '#F8FAFC',
+          textLight: '#1E293B'
+        }
       },
+      animation: {
+        'spin-slow': 'spin 8s linear infinite',
+      }
     },
   },
   plugins: [],
-} satisfies Config;
+}
+export default config
