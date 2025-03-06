@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import ThemeProvider from '@/components/ThemeProvider' // Importación default
 import SmoothScroll from '@/components/SmoothScroll'
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <ThemeProvider>
         <SmoothScroll />
           {children}
+          <Analytics />
        </ThemeProvider>
       </body>
     </html>
